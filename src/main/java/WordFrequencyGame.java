@@ -6,16 +6,18 @@ import java.util.StringJoiner;
 
 public class WordFrequencyGame {
 
+    private static final String SPACE_PATTERN = "\\s+";
+
     public String getResult(String sentence) {
 
-        if (sentence.split("\\s+").length == 1) {
+        if (sentence.split(SPACE_PATTERN).length == 1) {
             return sentence + " 1";
         } else {
 
             try {
 
                 //split the input string with 1 to n pieces of spaces
-                String[] arr = sentence.split("\\s+");
+                String[] arr = sentence.split(SPACE_PATTERN);
 
                 List<Input> inputList = new ArrayList<>();
                 for (String s : arr) {
