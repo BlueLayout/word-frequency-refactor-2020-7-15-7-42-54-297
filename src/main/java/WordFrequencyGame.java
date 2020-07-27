@@ -51,16 +51,16 @@ public class WordFrequencyGame {
     }
 
     private Map<String, List<WordInfo>> getListMap(List<WordInfo> wordInfoList) {
-        Map<String, List<WordInfo>> map = new HashMap<>();
+        Map<String, List<WordInfo>> wordInfoMap = new HashMap<>();
         for (WordInfo wordInfo : wordInfoList) {
-            if (!map.containsKey(wordInfo.getValue())) {
-                ArrayList arr = new ArrayList<>();
-                arr.add(wordInfo);
-                map.put(wordInfo.getValue(), arr);
+            if (!wordInfoMap.containsKey(wordInfo.getValue())) {
+                ArrayList wordInfos = new ArrayList<>();
+                wordInfos.add(wordInfo);
+                wordInfoMap.put(wordInfo.getValue(), wordInfos);
             } else {
-                map.get(wordInfo.getValue()).add(wordInfo);
+                wordInfoMap.get(wordInfo.getValue()).add(wordInfo);
             }
         }
-        return map;
+        return wordInfoMap;
     }
 }
