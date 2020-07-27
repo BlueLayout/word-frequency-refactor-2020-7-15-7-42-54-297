@@ -9,6 +9,7 @@ public class WordFrequencyGame {
     private static final String SPACE_PATTERN = "\\s+";
     private static final String NEW_LINE_DELIMITER = "\n";
     private static final String BLANK_SPACE = " ";
+    private static final String CALCULATE_ERROR = "Calculate Error";
 
     public String getResult(String sentence) {
 
@@ -44,7 +45,7 @@ public class WordFrequencyGame {
                 }
                 return joiner.toString();
             } catch (Exception e) {
-                return "Calculate Error";
+                return CALCULATE_ERROR;
             }
         }
     }
